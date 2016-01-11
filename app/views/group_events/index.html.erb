@@ -1,0 +1,41 @@
+<h1>Listing group_events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Event start</th>
+      <th>Event end</th>
+      <th>Event duration</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Location</th>
+      <th>Published</th>
+      <th>Deleted</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @group_events.each do |group_event| %>
+      <tr>
+        <td><%= group_event.event_start %></td>
+        <td><%= group_event.event_end %></td>
+        <td><%= group_event.event_duration %></td>
+        <td><%= group_event.name %></td>
+        <td><%= group_event.description %></td>
+        <td><%= group_event.location %></td>
+        <td><%= group_event.published %></td>
+        <td><%= group_event.deleted %></td>
+        <td><%= link_to 'Show', group_event %></td>
+        <td><%= link_to 'Edit', edit_group_event_path(group_event) %></td>
+        <td><%= link_to 'Destroy', group_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Group event', new_group_event_path %>
