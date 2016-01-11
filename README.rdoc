@@ -7,11 +7,11 @@
 * There should be attributes to set and update the start, end or duration of the event (and calculate the other value). 
 * The event also has a name, description (which supports formatting) and location. 
 * The event should be draft or published. 
-* To publish all of the fields are required, it can be saved with only a subset of fields before it’s published. 
+* To publish all of the fields are required, it can be saved with only a subset of fields before itâ€™s published. 
 * When the event is deleted/remove it should be kept in the database and marked as such.
 
 == Deliverables
 
 * AR model, spec and migration for a GroupEvent that would meet the needs of the description above. 
-* API api controller and spec to support JSON request/responses to manage these GroupEvents. 
+* API controller and spec to support JSON request/responses to manage these GroupEvents. 
 * For the purposes of this exercise, ignore auth.
